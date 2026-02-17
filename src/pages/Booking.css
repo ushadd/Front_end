@@ -1,0 +1,269 @@
+/* Color Palette & Variables */
+:root {
+  --primary: #6366f1; /* Modern Indigo */
+  --primary-hover: #4f46e5;
+  --success: #10b981;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Container Setup */
+.booking-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  padding: 20px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Card Styling */
+.booking-card {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 550px;
+  transition: transform 0.3s ease;
+}
+
+.booking-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.booking-header h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.booking-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Form Elements */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group .icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.grid-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Buttons */
+.submit-btn {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+}
+
+/* Payment Step UI */
+.payment-card {
+  text-align: center;
+}
+
+.price-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 1.25rem;
+  border-radius: 16px;
+  margin: 1.5rem 0;
+  border: 1px dashed var(--text-muted);
+}
+
+.price-summary strong {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.payment-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pay-opt {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.pay-opt:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* UPI & Cash Specific Styling */
+.qr-placeholder {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.qr-placeholder img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.app-shortcuts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.app-btn {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+.gpay { background: #4285F4; }
+.phonepe { background: #5f259f; }
+
+.info-box {
+  background: #fff9db;
+  border-left: 4px solid #fcc419;
+  padding: 15px;
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #856404;
+}
+
+.back-link {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.opt-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.opt-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.w-100 { width: 100%; }
+
+/* Rating Step UI */
+.success-card {
+  text-align: center;
+  animation: slideUp 0.5s ease-out;
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 2rem 0;
+}
+
+.rating-stars svg {
+  transition: transform 0.2s ease;
+}
+
+.rating-stars svg:hover {
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .grid-inputs {
+    grid-template-columns: 1fr;
+  }
+  .booking-card {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,80 @@
+/* Custom Properties */
+:root {
+  --mint: #2ec4b6;
+  --navy: #202c39;
+  --amber: #ffbf69;
+  --ice: #f8fdff;
+  --text-dark: #2d3436;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  background-color: var(--ice);
+  color: var(--text-dark);
+}
+
+/* --- Header Styling --- */
+.custom-navbar {
+  background-color: var(--navy) !important;
+  border-bottom: 3px solid var(--mint);
+  padding: 1rem 0;
+}
+
+.navbar-brand .fw-bold {
+  color: var(--mint) !important;
+  letter-spacing: 1px;
+}
+
+/* Search Bar - Pill Style */
+.custom-navbar .form-control {
+  border-radius: 50px 0 0 50px;
+  border: 2px solid transparent;
+  padding-left: 20px;
+}
+
+.custom-navbar .btn-light {
+  background-color: var(--mint) !important;
+  color: white !important;
+  border-radius: 0 50px 50px 0;
+  font-weight: 600;
+  padding: 0 20px;
+  border: none;
+}
+
+/* Nav Links */
+.nav-link {
+  color: rgba(255,255,255,0.8) !important;
+  font-weight: 500;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--mint) !important;
+  transform: translateY(-2px);
+}
+
+/* --- Global Button (For Services/Booking) --- */
+.btn-primary-custom {
+  background-color: var(--mint);
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+  background-color: #24a196;
+  box-shadow: 0 4px 15px rgba(46, 196, 182, 0.4);
+}
+
+/* --- Footer Styling --- */
+footer {
+  background-color: var(--navy);
+  color: white;
+  padding: 40px 0;
+  margin-top: 50px;
+}
