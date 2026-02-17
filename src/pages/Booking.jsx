@@ -55,7 +55,7 @@ const handlePaymentSelection = (method) => {
 
   // --- STEP 1: BOOKING FORM ---
   if (step === 1) return (
-    <div className="booking-wrapper">
+    <div id= "book"className="booking-wrapper">
       <div className="booking-card">
         <div className="booking-header">
           <h2>Book Your Service</h2>

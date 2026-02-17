@@ -1,5 +1,5 @@
 import React from 'react';
-import Booking from '../pages/Booking.jsx';
+import { Link } from 'react-router-dom';
 
 function Banner() {
   return (
@@ -19,15 +19,25 @@ function Banner() {
               Join 10,000+ homeowners who trust our vetted, background-checked
               professionals to keep their spaces pristine.
             </p>
-            <div className="d-flex gap-3">
-              <button className="btn btn-lg px-4 py-3 rounded-3"
-                      style={{ backgroundColor: '#00A699', color: 'white', fontWeight: '600' }}>
-                Book Your Cleaning
 
-              </button>
-              <button className="btn btn-outline-secondary btn-lg px-4 py-3 rounded-3">
+            <div className="d-flex gap-3">
+              {/* LINK 1: Redirects to Login first as requested */}
+              <Link
+                to="/login"
+                className="btn btn-lg px-4 py-3 rounded-3"
+                style={{ backgroundColor: '#00A699', color: 'white', fontWeight: '600', textDecoration: 'none' }}
+              >
+                Book Your Cleaning
+              </Link>
+
+              {/* LINK 2: Redirects to Services page */}
+              <Link
+                to="/services"
+                className="btn btn-outline-secondary btn-lg px-4 py-3 rounded-3"
+                style={{ textDecoration: 'none' }}
+              >
                 See Pricing
-              </button>
+              </Link>
             </div>
 
             {/* Trust Bar */}
@@ -46,7 +56,6 @@ function Banner() {
                 alt="Housekeeping Professional"
                 className="img-fluid rounded-4 shadow-lg"
               />
-              {/* Floating UI Element to make it look 'App-like' */}
               <div className="position-absolute bottom-0 start-0 m-4 bg-white p-3 rounded-3 shadow-sm border-start border-4 border-success">
                 <p className="mb-0 small fw-bold text-dark">✓ 100% Satisfaction Guarantee</p>
               </div>
