@@ -102,15 +102,6 @@ function Login() {
                   onChange={handleChange}
                 />
               </div>
-              <div className="input-group">
-                <MapPin className="icon" size={18} />
-                <input
-                  required
-                  name="address"
-                  placeholder="Residential Address"
-                  onChange={handleChange}
-                />
-              </div>
             </>
           )}
 
