@@ -30,9 +30,17 @@ function Login() {
           email: formData.email,
           password: formData.password
         });
-        localStorage.setItem("token", response.data.token);
-        setMessage("Login successful!");
-        setTimeout(() => navigate("/booking"), 1000);
+        // Store user info from backend response
+        if (response.data && response.data.id) {
+          localStorage.setItem("userId", response.data.id);
+          localStorage.setItem("userName", response.data.user_name);
+          localStorage.setItem("userEmail", response.data.user_mail);
+          localStorage.setItem("userRole", response.data.user_role);
+          setMessage("Login successful!");
+          setTimeout(() => navigate("/booking"), 1000);
+        } else {
+          setMessage("Invalid email or password");
+        }
       } else {
         // Register flow
         await registerUser(formData);
@@ -101,6 +109,15 @@ function Login() {
                   placeholder="Phone Number"
                   onChange={handleChange}
                 />
+              </div>
+              <div className="input-group">
+
+                <select required name="role" onChange={handleChange} value={formData.role || ""}>
+                  <option value="" disabled>Select Role</option>
+                  <option value="CUSTOMER">CUSTOMER</option>
+                  <option value="STAFF">STAFF</option>
+                </select>
+
               </div>
             </>
           )}
